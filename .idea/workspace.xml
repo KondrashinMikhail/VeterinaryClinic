@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/kenai_nbpwr_jdesktop_animation_timing.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/projectlombok_lombok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/quartz_scheduler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_simple.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sun_mail_javax.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VerterinaryClinic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/add-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/delete-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/loginIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/registrationIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/modelsEnums/Models.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/modelsEnums/PossibleAnimalSpecies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/modelsEnums/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/notificationEnums/NotificationLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/notificationEnums/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/InformationForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/InformationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/LoginForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/LoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/NotificationForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/NotificationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/RegistrationForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/RegistrationForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/comboBox/CustomComboBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/comboBox/CustomComboBoxUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/notification/GraphicsUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/notification/RoundedPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/notification/ShadowRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/table/CustomTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/table/ModernScrollBarUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/customGraphics/table/ScrollBarCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mailLogic/AutomaticJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mailLogic/AutomaticMailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mailLogic/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/models/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/models/Cure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/models/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/models/Vaccination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/models/Visit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/viewModels/AnimalViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/viewModels/CureViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/viewModels/UsersViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/viewModels/VaccinationViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/viewModels/VisitViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/ConstantUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/DatabaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/DesignUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MSeEoz7tFOnkY3P0rJtKyZ88Dp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mihailkondrasin/Documents/Projects/MyProjects/VerterinaryClinic&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36091954&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Personal\Projects\MyProjects\VerterinaryClinic\src\form\customGraphics" />
+      <recent name="C:\Personal\Projects\MyProjects\VerterinaryClinic\src\form\customGraphics\comboBox" />
+      <recent name="C:\Personal\Projects\MyProjects\VerterinaryClinic\res" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Personal\Projects\MyProjects\VerterinaryClinic\res" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainConfiguration" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="VerterinaryClinic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="" />
+      <created>1677765304751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677765304751</updated>
+    </task>
+    <servers />
+  </component>
+</project>
