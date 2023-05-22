@@ -4,6 +4,8 @@ import enums.notificationEnums.NotificationLocation;
 import enums.notificationEnums.NotificationType;
 import enums.modelsEnums.UserRole;
 import storage.Database;
+import storage.Mapper;
+import storage.PasswordCoder;
 import storage.models.Users;
 import storage.DTOs.UsersDTO;
 import utils.DesignUtils;
@@ -44,41 +46,32 @@ public class RegistrationForm extends JFrame{
             if (textFieldLogin.getText().isEmpty() || textFieldName.getText().isEmpty() || textFieldMail.getText().isEmpty()
                     || String.valueOf(passwordFieldPassword.getPassword()).isEmpty() || String.valueOf(passwordFieldPasswordConfirm.getPassword()).isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Необходимо заполнить все поля").showNotification();
-                if (textFieldLogin.getText().isEmpty()) wrongLoginPaint();
-                if (textFieldName.getText().isEmpty()) wrongNamePaint();
-                if (textFieldMail.getText().isEmpty()) wrongMailPaint();
-                if (String.valueOf(passwordFieldPassword.getPassword()).isEmpty()) wrongPasswordPaint();
-                if (String.valueOf(passwordFieldPasswordConfirm.getPassword()).isEmpty()) wrongPasswordConfirmPaint();
                 return;
             }
 
             if (!String.valueOf(passwordFieldPasswordConfirm.getPassword()).equals(String.valueOf(passwordFieldPassword.getPassword()))) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Пароли не совпадают").showNotification();
-                wrongPasswordPaint();
-                wrongPasswordConfirmPaint();
                 return;
             }
 
             if (!Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersDTO::new).toList().isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "В системе есть пользователь с таким логином").showNotification();
-                wrongLoginPaint();
                 return;
             }
-
 
             if (!Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$").matcher(textFieldMail.getText()).matches()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Почта введена некорректно").showNotification();
-                wrongMailPaint();
                 return;
             }
 
-            Database.getInstance().insertOrUpdate(Users.builder()
-                    .name(textFieldName.getText())
-                    .login(textFieldLogin.getText())
-                    .mail(textFieldMail.getText())
-                    .role(UserRole.Client.ordinal())
-                    .password(String.valueOf(passwordFieldPassword.getPassword()))
-                    .build());
+            Database.getInstance().insertOrUpdate(Mapper.mapFromDTO(UsersDTO.builder()
+                            .name(textFieldName.getText())
+                            .login(textFieldLogin.getText())
+                            .mail(textFieldMail.getText())
+                            .role(UserRole.Client.ordinal())
+                            .password(PasswordCoder.generateHashedPassword(String.valueOf(passwordFieldPassword.getPassword())))
+                            .build(),
+                    UsersDTO.class, Users.class));
 
             new LoginForm(this).showNotification(NotificationType.SUCCESS, "Регистрация выполнена, необходимо войти");
             dispose();
@@ -100,28 +93,5 @@ public class RegistrationForm extends JFrame{
         textFieldMail.setBorder(new MatteBorder(0 ,0, 2, 0, DesignUtils.SUB_MAIN_COLOR));
         passwordFieldPassword.setBorder(new MatteBorder(0 ,0, 2, 0, DesignUtils.SUB_MAIN_COLOR));
         passwordFieldPasswordConfirm.setBorder(new MatteBorder(0 ,0, 2, 0, DesignUtils.SUB_MAIN_COLOR));
-    }
-
-    private void wrongLoginPaint() {
-        textFieldLogin.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        loginLabel.setForeground(DesignUtils.ERROR_COLOR);
-    }
-
-    private void wrongNamePaint() {
-        textFieldName.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        nameLabel.setForeground(DesignUtils.ERROR_COLOR);
-    }
-    private void wrongPasswordPaint() {
-        passwordFieldPassword.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        passwordLabel.setForeground(DesignUtils.ERROR_COLOR);
-    }
-    private void wrongPasswordConfirmPaint() {
-        passwordFieldPasswordConfirm.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        passwordConfirmLabel.setForeground(DesignUtils.ERROR_COLOR);
-    }
-
-    private void wrongMailPaint() {
-        textFieldMail.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        mailLabel.setForeground(DesignUtils.ERROR_COLOR);
     }
 }

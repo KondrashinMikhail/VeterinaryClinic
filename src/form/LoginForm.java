@@ -3,6 +3,8 @@ package form;
 import enums.notificationEnums.NotificationLocation;
 import enums.notificationEnums.NotificationType;
 import storage.Database;
+import storage.Mapper;
+import storage.PasswordCoder;
 import storage.models.Users;
 import storage.DTOs.UsersDTO;
 import utils.ConstantUtils;
@@ -10,6 +12,8 @@ import utils.DesignUtils;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
+import java.util.List;
+import java.util.Objects;
 
 public class LoginForm extends JFrame {
     private JTextField textFieldLogin;
@@ -21,7 +25,6 @@ public class LoginForm extends JFrame {
     private JLabel passwordLabel;
 
     public LoginForm(JFrame parent) {
-//        new NotificationForm(this, NotificationType.SUCCESS, NotificationLocation.CENTER, "Добро пожаловать, ").showNotification();
 
         setTitle("Авторизация");
         setLocationRelativeTo(parent);
@@ -38,33 +41,20 @@ public class LoginForm extends JFrame {
             defaultFieldsPaint();
             if (textFieldLogin.getText().isEmpty() || String.valueOf(passwordFieldPassword.getPassword()).isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Необходимо заполнить поля 'Логин' и 'Пароль'").showNotification();
-
-                if (textFieldLogin.getText().isEmpty() && String.valueOf(passwordFieldPassword.getPassword()).isEmpty()) {
-                    wrongLoginPaint();
-                    wrongPasswordPaint();
-                }
-                else if (!textFieldLogin.getText().isEmpty()) wrongPasswordPaint();
-                else wrongLoginPaint();
                 return;
             }
-            if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersDTO::new).findAny().isEmpty()) {
-                new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "В системе нет пользователя с таким логином").showNotification();
-                wrongLoginPaint();
-                return;
-            }
-            if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).password(String.valueOf(passwordFieldPassword.getPassword())).build()).stream().map(UsersDTO::new).findAny().isEmpty()) {
-                new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Неправильный пароль").showNotification();
-                wrongPasswordPaint();
-                return;
-            }
-            ConstantUtils.authorizedUser = Database.getInstance().select(Users.builder()
-                    .login(textFieldLogin.getText())
-                    .password(String.valueOf(passwordFieldPassword.getPassword())).build()).first();
 
-            new InformationForm(this);
-            dispose();
-
-            //new NotificationForm(this, NotificationType.SUCCESS, NotificationLocation.TOP_CENTER, "Добро пожаловать, " + ConstantUtils.authorizedUser.getName()).showNotification();
+            boolean isUserExist = Mapper.mapToDTO(Database.getInstance().select(Users.builder().build()), UsersDTO.class, Users.class).stream().anyMatch(user ->
+                            Objects.equals(user.getLogin(), textFieldLogin.getText())
+                                    && PasswordCoder.confirmPassword(String.valueOf(passwordFieldPassword.getPassword()), user.getPassword()));
+            if (!isUserExist) {
+                new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Такого пользователя нет в системе").showNotification();
+            }
+            else {
+                //TODO: Сделать вызов формы в зависимости от пользователя
+                new InformationForm(this);
+                dispose();
+            }
         });
 
         registerButton.addActionListener(e -> {
@@ -72,21 +62,12 @@ public class LoginForm extends JFrame {
             dispose();
         });
     }
-    
+
     private void defaultFieldsPaint() {
         loginLabel.setForeground(DesignUtils.MAIN_COLOR);
         passwordLabel.setForeground(DesignUtils.MAIN_COLOR);
         textFieldLogin.setBorder(new MatteBorder(0 ,0, 2, 0, DesignUtils.MAIN_COLOR));
         passwordFieldPassword.setBorder(new MatteBorder(0 ,0, 2, 0, DesignUtils.MAIN_COLOR));
-    }
-
-    private void wrongLoginPaint() {
-        textFieldLogin.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        loginLabel.setForeground(DesignUtils.ERROR_COLOR);
-    }
-    private void wrongPasswordPaint() {
-        passwordFieldPassword.setBorder(new MatteBorder(0, 0, 2, 0, DesignUtils.ERROR_COLOR));
-        passwordLabel.setForeground(DesignUtils.ERROR_COLOR);
     }
 
     public void showNotification(NotificationType type, String message) {

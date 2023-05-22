@@ -1,11 +1,13 @@
 package storage.DTOs;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import storage.models.Cure;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
 public class CureDTO {
     Integer id;
     String name;

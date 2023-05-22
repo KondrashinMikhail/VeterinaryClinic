@@ -4,26 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="m">
-      <change afterPath="$PROJECT_DIR$/src/storage/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/PasswordCoder.java" afterDir="false" />
+    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="Корректная работа по паттерну MVVM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VerterinaryClinic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VerterinaryClinic.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/LoginForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/form/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/RegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Cure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Cure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Vaccination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Vaccination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Visit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/viewModels/AnimalViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/AnimalDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/viewModels/CureViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/CureDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/viewModels/UsersViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/UsersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/viewModels/VaccinationViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/VaccinationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/viewModels/VisitViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/VisitDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DatabaseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DatabaseUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/AnimalDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/AnimalDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/CureDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/CureDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/UsersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/UsersDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/VaccinationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/VaccinationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/VisitDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/VisitDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/PasswordCoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/PasswordCoder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683877968850</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Корректная работа по паттерну MVVM">
+      <created>1684786868563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684786868563</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,7 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="m" />
-    <option name="LAST_COMMIT_MESSAGE" value="m" />
+    <MESSAGE value="Корректная работа по паттерну MVVM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Корректная работа по паттерну MVVM" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -151,7 +150,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

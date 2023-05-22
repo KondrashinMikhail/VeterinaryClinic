@@ -1,11 +1,13 @@
 package storage.DTOs;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import storage.models.Users;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
 public class UsersDTO {
     Integer id;
     String name;

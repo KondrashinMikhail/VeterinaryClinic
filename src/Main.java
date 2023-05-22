@@ -3,6 +3,7 @@ import storage.DTOs.AnimalDTO;
 import storage.DTOs.CureDTO;
 import storage.Database;
 import storage.Mapper;
+import storage.PasswordCoder;
 import storage.models.Animal;
 import storage.models.Cure;
 
@@ -13,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,8 +27,6 @@ public class Main {
         Animal c = Mapper.mapFromDTO(d, AnimalDTO.class, Animal.class);
 
         new LoginForm(null);
-
-
 
         //new InformationForm(null);
 

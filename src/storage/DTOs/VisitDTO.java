@@ -1,13 +1,15 @@
 package storage.DTOs;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import storage.models.Visit;
 
 import java.sql.Timestamp;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
 public class VisitDTO {
     Integer id;
     Timestamp date;
