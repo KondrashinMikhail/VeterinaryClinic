@@ -14,5 +14,6 @@
     <orderEntry type="library" name="sun.mail.javax" level="project" />
     <orderEntry type="library" name="quartz.scheduler" level="project" />
     <orderEntry type="library" name="slf4j.simple" level="project" />
+    <orderEntry type="library" name="mindrot.jbcrypt" level="project" />
   </component>
 </module>

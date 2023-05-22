@@ -4,15 +4,12 @@ import enums.notificationEnums.NotificationLocation;
 import enums.notificationEnums.NotificationType;
 import storage.Database;
 import storage.models.Users;
-import storage.viewModels.UsersViewModel;
+import storage.DTOs.UsersDTO;
 import utils.ConstantUtils;
 import utils.DesignUtils;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
-import java.awt.*;
-import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 public class LoginForm extends JFrame {
     private JTextField textFieldLogin;
@@ -50,12 +47,12 @@ public class LoginForm extends JFrame {
                 else wrongLoginPaint();
                 return;
             }
-            if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersViewModel::new).findAny().isEmpty()) {
+            if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersDTO::new).findAny().isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "В системе нет пользователя с таким логином").showNotification();
                 wrongLoginPaint();
                 return;
             }
-            else if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).password(String.valueOf(passwordFieldPassword.getPassword())).build()).stream().map(UsersViewModel::new).findAny().isEmpty()) {
+            if (Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).password(String.valueOf(passwordFieldPassword.getPassword())).build()).stream().map(UsersDTO::new).findAny().isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Неправильный пароль").showNotification();
                 wrongPasswordPaint();
                 return;

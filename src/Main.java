@@ -1,11 +1,13 @@
 import form.LoginForm;
+import storage.DTOs.AnimalDTO;
+import storage.DTOs.CureDTO;
 import storage.Database;
-import storage.models.Visit;
+import storage.Mapper;
+import storage.models.Animal;
+import storage.models.Cure;
 
 import javax.swing.*;
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.util.Calendar;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +18,17 @@ public class Main {
             e.printStackTrace();
         }
 
+        List<Cure> cures = Database.getInstance().select(Cure.builder().build()).stream().toList();
+        List<CureDTO> curesDTO = Mapper.mapToDTO(Database.getInstance().select(Cure.builder().build()), CureDTO.class, Cure.class);
+
+        AnimalDTO d = Mapper.mapToDTO(Database.getInstance().select(Animal.builder().build()), AnimalDTO.class, Animal.class).get(0);
+
+        Animal c = Mapper.mapFromDTO(d, AnimalDTO.class, Animal.class);
+
         new LoginForm(null);
+
+
+
         //new InformationForm(null);
 
 

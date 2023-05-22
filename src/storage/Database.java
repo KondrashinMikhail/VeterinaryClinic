@@ -2,7 +2,6 @@ package storage;
 
 import lombok.NonNull;
 import lombok.SneakyThrows;
-import utils.DatabaseUtils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
@@ -14,6 +13,21 @@ import java.util.*;
 public class Database {
     private static Database instance;
     private static Connection connection;
+    private static final String IP = "localhost";
+    private static final int PORT = 5432;
+    private static final String DATABASE_NAME = "postgres";
+    private static final String USER_NAME = "postgres";
+    private static final String PASSWORD = "postgres";
+
+    private static final String CONNECTION_URL = String.format("jdbc:postgresql://%s:%s/%s", IP, PORT, DATABASE_NAME);
+    //public static final String CONNECTION_URL = "jdbc:postgresql://2256-79-132-103-48.ngrok-free.app/postgres";
+    private static final String DRIVER = "org.postgresql.Driver";
+
+    private static final String INSERT_REQUEST = "INSERT INTO %s (%s) VALUES (%s)";
+    private static final String UPDATE_REQUEST = "UPDATE %s SET %s WHERE id = %o";
+    private static final String DELETE_REQUEST = "DELETE FROM %s WHERE id = %o";
+    private static final String SELECT_REQUEST = "SELECT * FROM %s %s";
+    private static final String SELECT_OPTIONS = "WHERE %s";
 
     private Database() {}
 
@@ -21,8 +35,8 @@ public class Database {
     public static Database getInstance() {
         if (instance == null) {
             instance = new Database();
-            connection = DriverManager.getConnection(DatabaseUtils.CONNECTION_URL, DatabaseUtils.USER_NAME, DatabaseUtils.PASSWORD);
-            Class.forName(DatabaseUtils.DRIVER);
+            connection = DriverManager.getConnection(CONNECTION_URL, USER_NAME, PASSWORD);
+            Class.forName(DRIVER);
         }
         return instance;
     }
@@ -32,11 +46,11 @@ public class Database {
         List<String> columnNames = new ArrayList<>();
         List<String> values = new ArrayList<>();
         reflectionFillingToDB(entityClass, columnNames, values, null);
-        if (entityClass.getClass().getDeclaredMethod("getId").invoke(entityClass) == null) connection.createStatement().executeUpdate(String.format(DatabaseUtils.INSERT_REQUEST, entityClass.getClass().getSimpleName(), String.join(",", columnNames), String.join(",", values)));
+        if (entityClass.getClass().getDeclaredMethod("getId").invoke(entityClass) == null) connection.createStatement().executeUpdate(String.format(INSERT_REQUEST, entityClass.getClass().getSimpleName(), String.join(",", columnNames), String.join(",", values)));
         else {
             List<String> updateString = new ArrayList<>();
             for (int i = 0; i < columnNames.size(); i++) updateString.add(String.format("%s = %s", columnNames.get(i), values.get(i)));
-            connection.createStatement().executeUpdate(String.format(DatabaseUtils.UPDATE_REQUEST, entityClass.getClass().getSimpleName(), String.join(",", updateString), Integer.parseInt(values.get(0))));
+            connection.createStatement().executeUpdate(String.format(UPDATE_REQUEST, entityClass.getClass().getSimpleName(), String.join(",", updateString), Integer.parseInt(values.get(0))));
         }
     }
 
@@ -54,9 +68,9 @@ public class Database {
             List<String> cond = new ArrayList<>();
             for (int i = 0; i < values.size(); i++)
                 if (values.get(i) != null) cond.add(String.format("%s = %s", columnNames.get(i), values.get(i)));
-            condition = String.format(DatabaseUtils.SELECT_OPTIONS, String.join(" AND ", cond));
+            condition = String.format(SELECT_OPTIONS, String.join(" AND ", cond));
         }
-        String sqlRequest = String.format(DatabaseUtils.SELECT_REQUEST, entityClass.getClass().getSimpleName(), condition);
+        String sqlRequest = String.format(SELECT_REQUEST, entityClass.getClass().getSimpleName(), condition);
 
         try (ResultSet resultSet = connection.createStatement().executeQuery(sqlRequest)) {
             while (resultSet.next()) {
@@ -78,7 +92,7 @@ public class Database {
 
     @SneakyThrows(SQLException.class)
     public <T> void delete(@NonNull Class<T> entityClass, @NonNull Integer id) {
-        connection.createStatement().executeUpdate(String.format(DatabaseUtils.DELETE_REQUEST, entityClass.getSimpleName(), id));
+        connection.createStatement().executeUpdate(String.format(DELETE_REQUEST, entityClass.getSimpleName(), id));
     }
 
     public <T> void reflectionFillingToDB(@NonNull T entityClass, @NonNull List<String> columnNames, @NonNull List<String> values, List<Class<?>> columnTypes) {

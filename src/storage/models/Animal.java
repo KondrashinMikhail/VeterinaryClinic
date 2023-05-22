@@ -1,8 +1,12 @@
 package storage.models;
 
 import lombok.*;
+import storage.DTOs.AnimalDTO;
 
-@Value
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder(toBuilder = true)
 public class Animal implements Comparable<Animal> {
     Integer id;
@@ -15,5 +19,16 @@ public class Animal implements Comparable<Animal> {
     @Override
     public int compareTo(@NonNull Animal animal) {
         return id.compareTo(animal.id);
+    }
+
+    public Animal map(AnimalDTO dto) {
+        Animal entity = new Animal();
+        entity.id = dto.getId();
+        entity.name = dto.getName();
+        entity.species = dto.getSpecies();
+        entity.breed = dto.getBreed();
+        entity.age = dto.getAge();
+        entity.client_id = dto.getClient_id();
+        return entity;
     }
 }

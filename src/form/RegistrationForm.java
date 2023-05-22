@@ -5,7 +5,7 @@ import enums.notificationEnums.NotificationType;
 import enums.modelsEnums.UserRole;
 import storage.Database;
 import storage.models.Users;
-import storage.viewModels.UsersViewModel;
+import storage.DTOs.UsersDTO;
 import utils.DesignUtils;
 
 import javax.swing.*;
@@ -59,7 +59,7 @@ public class RegistrationForm extends JFrame{
                 return;
             }
 
-            if (!Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersViewModel::new).toList().isEmpty()) {
+            if (!Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersDTO::new).toList().isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "В системе есть пользователь с таким логином").showNotification();
                 wrongLoginPaint();
                 return;
