@@ -46,6 +46,8 @@ public class AnimalsForUsers extends JFrame {
     private JButton freeVisitsAButton;
     private JButton occupiedVisitsAButton;
     private JButton timetableCreationAButton;
+    private JButton accountAButton;
+    private JButton accountDButton;
 
     public AnimalsForUsers(JFrame parent) {
         setTitle("Животные");
@@ -203,6 +205,10 @@ public class AnimalsForUsers extends JFrame {
             new TimetableCreatingForm(this);
             dispose();
         });
+        accountAButton.addActionListener(e -> {
+            new AccountForm(this);
+            dispose();
+        });
 
         //Buttons for doctor
         curesDButton.addActionListener(e -> {
@@ -223,6 +229,10 @@ public class AnimalsForUsers extends JFrame {
         });
         reportCreatingDButton.addActionListener(e -> {
             new ReportVisitsForm(this);
+            dispose();
+        });
+        accountDButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

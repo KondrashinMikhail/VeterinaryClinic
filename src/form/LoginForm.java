@@ -58,7 +58,7 @@ public class LoginForm extends JFrame {
                                 .findFirst().orElseThrow();
                 ConstantUtils.wrongAttemptsCounter = 0;
 
-                new FreeVisitsForm(null);
+                new AccountForm(null);
                 dispose();
             }
         });

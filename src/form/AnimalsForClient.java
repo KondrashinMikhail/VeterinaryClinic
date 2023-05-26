@@ -41,6 +41,7 @@ public class AnimalsForClient extends JFrame {
     private JButton animalsCButton;
     private JButton historyVisitsCButton;
     private JButton freeVisitsCButton;
+    private JButton accountCButton;
 
     public AnimalsForClient(JFrame parent) {
         setTitle("Животные");
@@ -255,6 +256,10 @@ public class AnimalsForClient extends JFrame {
         });
         freeVisitsCButton.addActionListener(e -> {
             new FreeVisitsForm(this);
+            dispose();
+        });
+        accountCButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

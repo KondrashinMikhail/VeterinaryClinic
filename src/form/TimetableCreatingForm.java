@@ -33,6 +33,7 @@ public class TimetableCreatingForm extends JFrame {
     private JButton freeVisitsAButton;
     private JButton occupiedVisitsAButton;
     private JButton timetableCreationAButton;
+    private JButton accountAButton;
 
     public TimetableCreatingForm(JFrame parent) {
         setTitle("Создание расписания");
@@ -149,6 +150,10 @@ public class TimetableCreatingForm extends JFrame {
         });
         timetableCreationAButton.addActionListener(e -> {
             new TimetableCreatingForm(this);
+            dispose();
+        });
+        accountAButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

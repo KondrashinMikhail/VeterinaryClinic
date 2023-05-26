@@ -50,6 +50,9 @@ public class FreeVisitsForm extends JFrame {
     private JButton animalsCButton;
     private JButton historyVisitsCButton;
     private JButton freeVisitsCButton;
+    private JButton accountCButton;
+    private JButton accountAButton;
+    private JButton accountDButton;
 
     public FreeVisitsForm(JFrame parent) {
         setTitle("Свободные приемы");
@@ -251,6 +254,10 @@ public class FreeVisitsForm extends JFrame {
             new TimetableCreatingForm(this);
             dispose();
         });
+        accountAButton.addActionListener(e -> {
+            new AccountForm(this);
+            dispose();
+        });
 
         //Buttons for doctor
         curesDButton.addActionListener(e -> {
@@ -273,6 +280,10 @@ public class FreeVisitsForm extends JFrame {
             new ReportVisitsForm(this);
             dispose();
         });
+        accountDButton.addActionListener(e -> {
+            new AccountForm(this);
+            dispose();
+        });
 
         //Buttons for client
         doctorsCButton.addActionListener(e -> {
@@ -293,6 +304,10 @@ public class FreeVisitsForm extends JFrame {
         });
         freeVisitsCButton.addActionListener(e -> {
             new FreeVisitsForm(this);
+            dispose();
+        });
+        accountCButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

@@ -50,6 +50,7 @@ public class ReportVisitsForm extends JFrame{
     private JButton historyVisitsDButton;
     private JButton freeVisitsDButton;
     private JButton reportCreatingDButton;
+    private JButton accountDButton;
 
     public ReportVisitsForm(JFrame parent) {
         setTitle("Создание отчетов");
@@ -335,6 +336,10 @@ public class ReportVisitsForm extends JFrame{
         });
         reportCreatingDButton.addActionListener(e -> {
             new ReportVisitsForm(this);
+            dispose();
+        });
+        accountDButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

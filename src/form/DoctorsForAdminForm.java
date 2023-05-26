@@ -48,6 +48,7 @@ public class DoctorsForAdminForm extends JFrame{
     private JButton freeVisitsAButton;
     private JButton occupiedVisitsAButton;
     private JButton timetableCreationAButton;
+    private JButton accountAButton;
 
     public DoctorsForAdminForm(JFrame parent) {
         setTitle("Врачи");
@@ -409,6 +410,10 @@ public class DoctorsForAdminForm extends JFrame{
         });
         timetableCreationAButton.addActionListener(e -> {
             new TimetableCreatingForm(this);
+            dispose();
+        });
+        accountAButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

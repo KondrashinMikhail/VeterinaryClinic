@@ -30,6 +30,8 @@ public class HistoryVisitsForm extends JFrame {
     private JButton animalsCButton;
     private JButton historyVisitsCButton;
     private JButton freeVisitsCButton;
+    private JButton accountCButton;
+    private JButton accountDButton;
 
     public HistoryVisitsForm(JFrame parent) {
         setTitle("История приемов");
@@ -169,6 +171,10 @@ public class HistoryVisitsForm extends JFrame {
             new ReportVisitsForm(this);
             dispose();
         });
+        accountDButton.addActionListener(e -> {
+            new AccountForm(this);
+            dispose();
+        });
 
         //Buttons for client
         doctorsCButton.addActionListener(e -> {
@@ -189,6 +195,10 @@ public class HistoryVisitsForm extends JFrame {
         });
         freeVisitsCButton.addActionListener(e -> {
             new FreeVisitsForm(this);
+            dispose();
+        });
+        accountCButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }

@@ -38,6 +38,7 @@ public class CuresForAdminForm extends JFrame {
     private JButton freeVisitsAButton;
     private JButton occupiedVisitsAButton;
     private JButton timetableCreationAButton;
+    private JButton accountAButton;
 
     public CuresForAdminForm(JFrame parent) {
         setTitle("Лекарства");
@@ -236,6 +237,10 @@ public class CuresForAdminForm extends JFrame {
         });
         timetableCreationAButton.addActionListener(e -> {
             new TimetableCreatingForm(this);
+            dispose();
+        });
+        accountAButton.addActionListener(e -> {
+            new AccountForm(this);
             dispose();
         });
     }
