@@ -6,8 +6,8 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class MailSender {
-    private static final String email = "aibolitveterinaryclinic@gmail.com";
-    private static final String password = "dgnhezvmloewxqog";
+    private static final String EMAIL = "aibolitveterinaryclinic@gmail.com";
+    private static final String PASSWORD = "dgnhezvmloewxqog";
 
     public static void sendMail(String recipient, String subject, String text) {
 
@@ -20,20 +20,23 @@ public class MailSender {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(email, password);
+                return new PasswordAuthentication(EMAIL, PASSWORD);
             }
         });
 
-        try {
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(email));
-            message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-            message.setSubject(subject);
-            message.setText(text);
+        new Thread(() -> {
+            try {
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress(EMAIL));
+                message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+                message.setSubject(subject);
+                message.setText(text);
 
-            Transport.send(message);
-        } catch (MessagingException e) {
-            System.out.println(e.getMessage());
-        }
+                Transport.send(message);
+            } catch (MessagingException e) {
+                System.out.println(e.getMessage());
+            }
+        }).start();
+
     }
 }

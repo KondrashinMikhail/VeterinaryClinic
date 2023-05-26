@@ -60,10 +60,10 @@ public class CustomTable extends JTable {
         public Component getTableCellRendererComponent(JTable jtable, Object o, boolean bln, boolean bln1, int i, int i1) {
             Component com = super.getTableCellRendererComponent(jtable, o, bln, bln1, i, i1);
             com.setBackground(Color.WHITE);
-            com.setForeground(DesignUtils.MAIN_COLOR);
+            com.setForeground(DesignUtils.MIXED_MAIN_COLOR);
             com.setFont(com.getFont().deriveFont(Font.BOLD, 18));
             setHorizontalAlignment(alignment.getOrDefault(i1, JLabel.CENTER));
-            setBorder(new LineBorder(DesignUtils.MAIN_COLOR));
+            setBorder(new LineBorder(DesignUtils.MIXED_MAIN_COLOR));
             return com;
         }
     }
@@ -84,7 +84,7 @@ public class CustomTable extends JTable {
                 com.setForeground(Color.WHITE);
             } else {
                 if (row % 2 == 0) {
-                    com.setBackground(DesignUtils.MAIN_COLOR);
+                    com.setBackground(DesignUtils.MIXED_MAIN_COLOR);
                 } else {
                     com.setBackground(DesignUtils.MIXED_MAIN_COLOR);
                 }

@@ -296,13 +296,9 @@ public class InformationForm extends JFrame {
                         }
                     }
 
-
-
-
                     Database.getInstance().insertOrUpdate(Visit.builder()
                             .date(date)
-                            .comment(textFieldCommentVisit.getText())
-                            .isClientCame(isCame)
+                            .recommendation(textFieldCommentVisit.getText())
                             .doctor_id(doctorId)
                             .build());
                 }
@@ -358,8 +354,7 @@ public class InformationForm extends JFrame {
                     Database.getInstance().insertOrUpdate(Visit.builder()
                             .id(ConstantUtils.selectedVisit.getId())
                             .date(date)
-                            .comment(textFieldCommentVisit.getText())
-                            .isClientCame(isCame)
+                            .recommendation(textFieldCommentVisit.getText())
                             .animal_id(ConstantUtils.selectedVisit.getAnimal_id())
                             .client_id(ConstantUtils.selectedVisit.getClient_id())
                             .doctor_id(ConstantUtils.selectedVisit.getDoctor_id())
@@ -392,7 +387,6 @@ public class InformationForm extends JFrame {
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         table = new CustomTable();
         scrollPane = new JScrollPane();
         ((CustomTable) table).fixTable(scrollPane);
@@ -736,7 +730,7 @@ public class InformationForm extends JFrame {
                     if (visit.getAnimal_id() == 0 && visit.getClient_id() == 0)
                         model.addRow(new Object[]{visit.getId(),
                                 String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5),
-                                visit.getComment(),
+                                visit.getRecommendation(),
                                 Database.getInstance().select(Users.builder().id(visit.getDoctor_id()).build()).first().getName(),
                         });
                 }
@@ -756,10 +750,10 @@ public class InformationForm extends JFrame {
                         animalName = Database.getInstance().select(Animal.builder().id(visit.getAnimal_id()).build()).first().getName();
                     }
 
-                    if (visit.getIsClientCame())
-                        model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getComment(), "Пришел", clientName, animalName});
-                    else
-                        model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getComment(), "Не пришел", clientName, animalName});
+//                    if (visit.getIsClientCame())
+//                        model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getRecommendation(), "Пришел", clientName, animalName});
+//                    else
+//                        model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getRecommendation(), "Не пришел", clientName, animalName});
                 }
             }
         } else {
@@ -776,12 +770,12 @@ public class InformationForm extends JFrame {
                     animalName = Database.getInstance().select(Animal.builder().id(visit.getAnimal_id()).build()).first().getName();
                 }
 
-                if (visit.getIsClientCame())
-                    model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getComment(), "Пришел",
-                            Database.getInstance().select(Users.builder().id(visit.getDoctor_id()).build()).first().getName(), clientName, animalName});
-                else
-                    model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getComment(), "Не пришел",
-                            Database.getInstance().select(Users.builder().id(visit.getDoctor_id()).build()).first().getName(), clientName, animalName});
+//                if (visit.getIsClientCame())
+//                    model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getRecommendation(), "Пришел",
+//                            Database.getInstance().select(Users.builder().id(visit.getDoctor_id()).build()).first().getName(), clientName, animalName});
+//                else
+//                    model.addRow(new Object[]{visit.getId(), String.valueOf(visit.getDate()).substring(0, String.valueOf(visit.getDate()).length() - 5), visit.getRecommendation(), "Не пришел",
+//                            Database.getInstance().select(Users.builder().id(visit.getDoctor_id()).build()).first().getName(), clientName, animalName});
             }
         }
         return model;

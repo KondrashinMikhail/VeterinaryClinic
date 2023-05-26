@@ -43,7 +43,9 @@ public class RegistrationForm extends JFrame{
 
         registerButton.addActionListener(e -> {
             defaultFieldsPaint();
-            if (textFieldLogin.getText().isEmpty() || textFieldName.getText().isEmpty() || textFieldMail.getText().isEmpty()
+            if (textFieldLogin.getText().isEmpty()
+                    || textFieldName.getText().isEmpty()
+                    || textFieldMail.getText().isEmpty()
                     || String.valueOf(passwordFieldPassword.getPassword()).isEmpty() || String.valueOf(passwordFieldPasswordConfirm.getPassword()).isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Необходимо заполнить все поля").showNotification();
                 return;
@@ -54,7 +56,7 @@ public class RegistrationForm extends JFrame{
                 return;
             }
 
-            if (!Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream().map(UsersDTO::new).toList().isEmpty()) {
+            if (!Mapper.mapToDTO((Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build())), UsersDTO.class, Users.class).isEmpty()) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "В системе есть пользователь с таким логином").showNotification();
                 return;
             }
@@ -69,7 +71,7 @@ public class RegistrationForm extends JFrame{
                             .login(textFieldLogin.getText())
                             .mail(textFieldMail.getText())
                             .role(UserRole.Client.ordinal())
-                            .password(PasswordCoder.generateHashedPassword(String.valueOf(passwordFieldPassword.getPassword())))
+                            .password(PasswordCoder.encrypt(String.valueOf(passwordFieldPassword.getPassword())))
                             .build(),
                     UsersDTO.class, Users.class));
 

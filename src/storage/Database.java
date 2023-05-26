@@ -24,8 +24,8 @@ public class Database {
     private static final String DRIVER = "org.postgresql.Driver";
 
     private static final String INSERT_REQUEST = "INSERT INTO %s (%s) VALUES (%s)";
-    private static final String UPDATE_REQUEST = "UPDATE %s SET %s WHERE id = %o";
-    private static final String DELETE_REQUEST = "DELETE FROM %s WHERE id = %o";
+    private static final String UPDATE_REQUEST = "UPDATE %s SET %s WHERE id = %s";
+    private static final String DELETE_REQUEST = "DELETE FROM %s WHERE id = %s";
     private static final String SELECT_REQUEST = "SELECT * FROM %s %s";
     private static final String SELECT_OPTIONS = "WHERE %s";
 

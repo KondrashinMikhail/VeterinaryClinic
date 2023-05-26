@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="form.VaccinationForm">
+  <grid id="27dc6" binding="informationPanel" layout-manager="GridLayoutManager" row-count="9" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="774" height="518"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <scrollpane id="e295c" binding="scrollPane" custom-create="true">
+        <constraints>
+          <grid row="3" column="1" row-span="4" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-1"/>
+          <doubleBuffered value="false"/>
+          <focusTraversalPolicyProvider value="false"/>
+          <focusable value="true"/>
+          <font name="Arial" size="18"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <requestFocusEnabled value="true"/>
+          <wheelScrollingEnabled value="true"/>
+        </properties>
+        <border type="none" title-justification="2">
+          <font name="Arial" size="24"/>
+          <title-color color="-14421602"/>
+          <color color="-14421602"/>
+        </border>
+        <children>
+          <component id="4b36e" class="javax.swing.JTable" binding="table" custom-create="true">
+            <constraints/>
+            <properties>
+              <autoCreateRowSorter value="true"/>
+              <autoResizeMode value="4"/>
+              <autoscrolls value="false"/>
+              <background color="-1"/>
+              <fillsViewportHeight value="true"/>
+              <focusCycleRoot value="false"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-14421602"/>
+              <gridColor color="-1"/>
+              <inheritsPopupMenu value="false"/>
+              <opaque value="true"/>
+              <selectionBackground color="-6553618"/>
+              <selectionForeground color="-1"/>
+              <showHorizontalLines value="true"/>
+              <updateSelectionOnSort value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+              <visible value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <grid id="f1958" layout-manager="GridLayoutManager" row-count="7" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="20" left="20" bottom="20" right="20"/>
+        <constraints>
+          <grid row="2" column="0" row-span="2" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+        </properties>
+        <border type="none">
+          <font name="Arial" size="24"/>
+          <title-color color="-14421602"/>
+          <size top="20" left="20" bottom="20" right="20"/>
+          <color color="-14421602"/>
+        </border>
+        <children>
+          <component id="aeb56" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value="Дата"/>
+            </properties>
+          </component>
+          <component id="4c12" class="javax.swing.JTextField" binding="textFieldYear">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="-1"/>
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+            </properties>
+          </component>
+          <component id="b5eb2" class="javax.swing.JTextField" binding="textFieldMonth">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="-1"/>
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+            </properties>
+          </component>
+          <component id="a2fa8" class="javax.swing.JTextField" binding="textFieldDay">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="-1"/>
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+            </properties>
+          </component>
+          <component id="54e68" class="javax.swing.JTextField" binding="textFieldHour">
+            <constraints>
+              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="-1"/>
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+            </properties>
+          </component>
+          <component id="6b5de" class="javax.swing.JTextField" binding="textFieldMinute">
+            <constraints>
+              <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="50" height="-1"/>
+                <preferred-size width="50" height="-1"/>
+                <maximum-size width="50" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+            </properties>
+          </component>
+          <component id="2de7f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-6226016"/>
+              <text value="Год"/>
+            </properties>
+          </component>
+          <component id="38d47" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-6226016"/>
+              <text value="Месяц"/>
+            </properties>
+          </component>
+          <component id="7f41a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-6226016"/>
+              <text value="День"/>
+            </properties>
+          </component>
+          <component id="96a87" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-6226016"/>
+              <text value="Час"/>
+            </properties>
+          </component>
+          <component id="15980" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <foreground color="-6226016"/>
+              <text value="Минуты"/>
+            </properties>
+          </component>
+          <component id="a585a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value="-"/>
+            </properties>
+          </component>
+          <component id="b30c9" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value="-"/>
+            </properties>
+          </component>
+          <component id="d4548" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="52521" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value=":"/>
+            </properties>
+          </component>
+          <component id="2831a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="18"/>
+              <foreground color="-6226016"/>
+              <text value="Лекарство"/>
+            </properties>
+          </component>
+          <component id="1f1ce" class="javax.swing.JComboBox" binding="comboBoxCures" custom-create="true">
+            <constraints>
+              <grid row="4" column="0" row-span="2" col-span="9" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="400" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="996fc" class="javax.swing.JTextField" binding="textFieldCure">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="400" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <caretColor color="-14421602"/>
+              <font name="Arial" size="18"/>
+              <foreground color="-14421602"/>
+              <selectedTextColor color="-1"/>
+              <selectionColor color="-6553618"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <vspacer id="e9c41">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="9a67">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="28b70" class="javax.swing.JButton" binding="exitButton">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6226016"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="24"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Выйти из аккаунта"/>
+        </properties>
+      </component>
+      <component id="2c2b8" class="javax.swing.JButton" binding="addButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6226016"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="24"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Добавить"/>
+        </properties>
+      </component>
+      <component id="fc79b" class="javax.swing.JButton" binding="deleteButton">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6226016"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="24"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Удалить"/>
+        </properties>
+      </component>
+      <component id="45e72" class="javax.swing.JButton" binding="clearButton">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6226016"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="24"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Очистить выбор"/>
+        </properties>
+      </component>
+      <component id="feacf" class="javax.swing.JLabel" binding="labelState">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Arial" size="18"/>
+          <foreground color="-6226016"/>
+          <text value="Просматриваемое животное:"/>
+        </properties>
+      </component>
+      <component id="22fd2" class="javax.swing.JButton" binding="goBackButton">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6226016"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <focusPainted value="false"/>
+          <font name="Arial" size="24"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Назад"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

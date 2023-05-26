@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class DesignUtils {
     //public static final Color MAIN_COLOR = new Color(47, 218, 179);
-    public static final Color MAIN_COLOR = new Color(35, 241, 158);
+    public static final Color MAIN_COLOR = new Color(160, 255, 160);
     public static final Color SUB_MAIN_COLOR = new Color(0, 162, 249);
     public static final Color MIXED_MAIN_COLOR = new Color(31, 232, 168);
     public static final Color ERROR_COLOR = new Color(200, 100, 100);

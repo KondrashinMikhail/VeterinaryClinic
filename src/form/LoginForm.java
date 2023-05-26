@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class LoginForm extends JFrame {
-    private JTextField textFieldLogin;
+    public JTextField textFieldLogin;
     private JPasswordField passwordFieldPassword;
     private JButton loginButton;
     private JButton registerButton;
@@ -40,19 +40,25 @@ public class LoginForm extends JFrame {
         loginButton.addActionListener(e -> {
             defaultFieldsPaint();
             if (textFieldLogin.getText().isEmpty() || String.valueOf(passwordFieldPassword.getPassword()).isEmpty()) {
-                new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Необходимо заполнить поля 'Логин' и 'Пароль'").showNotification();
+                new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Необходимо заполнить поля 'Логин' и 'Пароль'!").showNotification();
                 return;
             }
 
-            boolean isUserExist = Mapper.mapToDTO(Database.getInstance().select(Users.builder().build()), UsersDTO.class, Users.class).stream().anyMatch(user ->
+            boolean isUserExist =
+                    Mapper.mapToDTO(Database.getInstance().select(Users.builder().build()), UsersDTO.class, Users.class).stream().anyMatch(user ->
                             Objects.equals(user.getLogin(), textFieldLogin.getText())
-                                    && PasswordCoder.confirmPassword(String.valueOf(passwordFieldPassword.getPassword()), user.getPassword()));
+                                    && Objects.equals(PasswordCoder.decrypt(user.getPassword()), String.valueOf(passwordFieldPassword.getPassword())));
             if (!isUserExist) {
                 new NotificationForm(this, NotificationType.WARNING, NotificationLocation.TOP_CENTER, "Такого пользователя нет в системе").showNotification();
             }
             else {
-                //TODO: Сделать вызов формы в зависимости от пользователя
-                new InformationForm(this);
+                ConstantUtils.authorizedUser =
+                        Database.getInstance().select(Users.builder().login(textFieldLogin.getText()).build()).stream()
+                                .filter(user -> Objects.equals(PasswordCoder.decrypt(user.getPassword()), String.valueOf(passwordFieldPassword.getPassword())))
+                                .findFirst().orElseThrow();
+                ConstantUtils.wrongAttemptsCounter = 0;
+
+                new FreeVisitsForm(null);
                 dispose();
             }
         });
