@@ -20,7 +20,6 @@ public class Database {
     private static final String PASSWORD = "postgres";
 
     private static final String CONNECTION_URL = String.format("jdbc:postgresql://%s:%s/%s", IP, PORT, DATABASE_NAME);
-    //public static final String CONNECTION_URL = "jdbc:postgresql://2256-79-132-103-48.ngrok-free.app/postgres";
     private static final String DRIVER = "org.postgresql.Driver";
 
     private static final String INSERT_REQUEST = "INSERT INTO %s (%s) VALUES (%s)";
