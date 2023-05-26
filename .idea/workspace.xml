@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="Переделывание форм регистрации и авторизации для считывания закодированного id">
-      <change afterPath="$PROJECT_DIR$/src/form/AnimalsForClient.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/AnimalsForClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/AnimalsForUsers.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/AnimalsForUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/ClientsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/ClientsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/CuresForAdminForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/CuresForAdminForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/CuresForUsersForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/CuresForUsersForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/FreeVisitsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/FreeVisitsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/HistoryVisitsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/HistoryVisitsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/ReportVisitsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/ReportVisitsForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/TimetableCreatingForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/TimetableCreatingForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/VaccinationForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/VaccinationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/DTOs/Visit_cureDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/models/Visit_cure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/modelsEnums/PossibleAnimalSpecies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/modelsEnums/PossibleAnimalSpecies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/InformationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/InformationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/LoginForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/LoginForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/RegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/customGraphics/table/CustomTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/customGraphics/table/CustomTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mailLogic/AutomaticJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mailLogic/AutomaticJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mailLogic/AutomaticMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mailLogic/AutomaticMailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mailLogic/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mailLogic/MailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/DTOs/VisitDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/DTOs/VisitDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/PasswordCoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/PasswordCoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/models/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/models/Visit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ConstantUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ConstantUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DesignUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DesignUtils.java" afterDir="false" />
-    </list>
+    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="Доделаны все исправления" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684789200090</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Доделаны все исправления">
+      <created>1685131552384</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685131552384</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,7 +145,8 @@
     <MESSAGE value="m" />
     <MESSAGE value="Корректная работа по паттерну MVVM" />
     <MESSAGE value="Переделывание форм регистрации и авторизации для считывания закодированного id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделывание форм регистрации и авторизации для считывания закодированного id" />
+    <MESSAGE value="Доделаны все исправления" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доделаны все исправления" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
