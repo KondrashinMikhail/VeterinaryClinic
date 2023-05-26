@@ -4,37 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="Присоединение к удаленной бд">
-      <change afterPath="$PROJECT_DIR$/src/form/AccountForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/form/AccountForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/AnimalsForClient.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/AnimalsForClient.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/AnimalsForClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/AnimalsForClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/AnimalsForUsers.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/AnimalsForUsers.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/AnimalsForUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/AnimalsForUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/ClientsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/ClientsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/ClientsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/ClientsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/CuresForAdminForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/CuresForAdminForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/CuresForAdminForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/CuresForAdminForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/CuresForUsersForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/CuresForUsersForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/CuresForUsersForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/CuresForUsersForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/DoctorsForAdminForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/DoctorsForClientsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/FreeVisitsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/FreeVisitsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/FreeVisitsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/FreeVisitsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/HistoryVisitsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/HistoryVisitsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/HistoryVisitsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/HistoryVisitsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/OccupiedVisitsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/ReportVisitsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/ReportVisitsForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/ReportVisitsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/ReportVisitsForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/TimetableCreatingForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/TimetableCreatingForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/TimetableCreatingForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/TimetableCreatingForm.java" afterDir="false" />
-    </list>
+    <list default="true" id="c3cac00d-2062-4660-9479-8ea6cd6a8613" name="Changes" comment="Добавление окна &quot;Мой аккаунт&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685140267542</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавление окна &quot;Мой аккаунт&quot;">
+      <created>1685143947174</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685143947174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +169,8 @@
     <MESSAGE value="Переделывание форм регистрации и авторизации для считывания закодированного id" />
     <MESSAGE value="Доделаны все исправления" />
     <MESSAGE value="Присоединение к удаленной бд" />
-    <option name="LAST_COMMIT_MESSAGE" value="Присоединение к удаленной бд" />
+    <MESSAGE value="Добавление окна &quot;Мой аккаунт&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление окна &quot;Мой аккаунт&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
