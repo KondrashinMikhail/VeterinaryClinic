@@ -13,7 +13,8 @@ import java.util.*;
 public class Database {
     private static Database instance;
     private static Connection connection;
-    private static final String IP = "151.248.120.240";
+    //private static final String IP = "151.248.120.240";
+    private static final String IP = "localhost";
     private static final int PORT = 5432;
     private static final String DATABASE_NAME = "postgres";
     private static final String USER_NAME = "postgres";

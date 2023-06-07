@@ -47,7 +47,7 @@ public class VaccinationForm extends JFrame {
         cures = Mapper.mapToDTO(Database.getInstance().select(Mapper.mapFromDTO(CureDTO.builder().build(), CureDTO.class, Cure.class)), CureDTO.class, Cure.class);
         labelState.setText(labelState.getText() + " " + currentAnimal.getName());
 
-        setTitle("Выписанные лекарства");
+        setTitle("История прививок");
         setLocationRelativeTo(parent);
         setContentPane(informationPanel);
         setMinimumSize(DesignUtils.TABLES_FORM_MINIMUM_SIZE);
